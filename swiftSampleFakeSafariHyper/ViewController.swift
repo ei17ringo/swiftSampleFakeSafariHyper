@@ -91,6 +91,20 @@ class ViewController: UIViewController {
         presentViewController(FacebookVC, animated: true, completion: nil)
     }
     
+    @IBAction func swipeDown(sender: UISwipeGestureRecognizer) {
+        
+        myTextField.resignFirstResponder()
+    }
+    
+    
+    //GestureRecognizerのdelegateをselfに設定して使用する
+    func gestureRecognizer(
+        gestureRecognizer: UIGestureRecognizer,
+        shouldRecognizeSimultaneouslyWithGestureRecognizer
+        otherGestureRecognizer: UIGestureRecognizer
+        ) -> Bool {
+            return true
+    }
 
 }
 

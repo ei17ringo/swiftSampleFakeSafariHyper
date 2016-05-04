@@ -42,6 +42,10 @@
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="g49-kr-kB4" appends="YES" id="rmC-Le-Ue5"/>
+                        </connections>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -52,6 +56,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" id="g49-kr-kB4">
+                    <connections>
+                        <action selector="swipeDown:" destination="BYZ-38-t0r" id="XnB-h0-JXE"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="ecc-cY-Ecu"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="377.5" y="339.5"/>
         </scene>
